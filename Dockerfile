@@ -7,4 +7,4 @@ ENV http_proxy=http://10.72.177.222:1080
 ENV no_proxy=11.*,10.*,*.sjgs
 
 
-RUN apk --update add --no-cach yarn
+RUN apk --update add --no-cache yarn
