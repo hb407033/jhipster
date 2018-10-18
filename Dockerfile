@@ -1,5 +1,7 @@
 FROM maven:3.5.4-jdk-8-alpine as builder
 
+RUN echo $JAVA_HOME
+
 FROM node:8.12.0-alpine as prod
 
 RUN apk update \
@@ -9,6 +11,3 @@ RUN apk update \
         bash-completion \
         && rm -rf /var/cache/apk/* \
         && /bin/bash
-ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
-
-CMD [ "/bin/bash" ]
