@@ -11,3 +11,5 @@ RUN apk update \
         bash-completion \
         && rm -rf /var/cache/apk/* \
         && /bin/bash
+RUN echo $JAVA_HOME
+RUN java -version
