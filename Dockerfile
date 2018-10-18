@@ -1,4 +1,4 @@
-FROM maven:3.5.4-jdk-8-alpine as builder
+FROM maven:3.5.4-jdk-8-alpine
 
 ENV NODE_VERSION 8.12.0
 
