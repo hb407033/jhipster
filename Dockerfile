@@ -13,3 +13,5 @@ FROM maven:3.5.4-jdk-8-alpine as builder
 RUN echo $JAVA_HOME \
     && java -version \
     && ls -l /usr/local/bin/
+    
+ENV PATH $PATH:/usr/local/bin/yarn
