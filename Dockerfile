@@ -4,7 +4,7 @@ FROM node:8.12.0-alpine as prod
 
 ENV https_proxy=http://10.72.177.222:1080
 ENV http_proxy=http://10.72.177.222:1080
-ENV no_proxy=11.*,10.*
+ENV no_proxy=11.*,10.*,*.sjgs
 
 
 RUN apk --update add --no-cach yarn
