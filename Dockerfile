@@ -9,5 +9,6 @@ RUN apk update \
         bash-completion \
         && rm -rf /var/cache/apk/* \
         && /bin/bash
+ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 
 CMD [ "/bin/bash" ]
