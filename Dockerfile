@@ -16,4 +16,4 @@ RUN ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
     
 ENV PATH $PATH:/usr/local/bin/yarn
 
-RUN yarn -v
+RUN /usr/local/bin/yarn -v
