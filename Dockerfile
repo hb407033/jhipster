@@ -10,8 +10,10 @@ RUN apk update \
 
 FROM maven:3.5.4-jdk-8-alpine as builder
 
-RUN echo $JAVA_HOME \
-    && java -version \
-    && ls -l /usr/local/bin/
+RUN ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
+    && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
+    && java -version
     
 ENV PATH $PATH:/usr/local/bin/yarn
+
+RUN yarn -v
